@@ -9,7 +9,7 @@ import userRouter from './routes/userRoutes.js';
 const app = express();
 connectDB();
 
-const allowedOrigins = ['https://mern-auth-indol-beta.vercel.app/',['http://localhost:5173/']]
+const allowedOrigins = ['https://mern-auth-indol-beta.vercel.app',['http://localhost:5173']]
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 // app.use(cors());
