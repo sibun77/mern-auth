@@ -10,6 +10,7 @@ const app = express();
 connectDB();
 
 const allowedOrigins = ['https://mern-auth-indol-beta.vercel.app']
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -20,11 +21,10 @@ app.get('/', (req, res) => res.send("API working"))
 app.use('/api/auth', authRouter)
 app.use('/api/user', userRouter)
 
-app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 if (process.env.NODE_ENV !== 'production') {
     const PORT = process.env.PORT || 5000
-    server.listen(PORT, () => console.log("Server is running on PORT: " + PORT))
+    app.listen(PORT, () => console.log("Server is running on PORT: " + PORT))
 }
 
 //export server for vercel
