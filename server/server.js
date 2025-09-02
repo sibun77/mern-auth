@@ -9,7 +9,7 @@ import userRouter from './routes/userRoutes.js';
 const app = express();
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['https://mern-auth-indol-beta.vercel.app/']
 
 app.use(express.json());
 app.use(cookieParser());
