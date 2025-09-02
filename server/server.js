@@ -9,7 +9,8 @@ import userRouter from './routes/userRoutes.js';
 const app = express();
 connectDB();
 
-app.use(cors({ origin: 'https://mern-auth-indol-beta.vercel.app', credentials: true }));
+//app.use(cors({ origin: 'https://mern-auth-indol-beta.vercel.app', credentials: true }));
+app.use(cors());
 
 app.use(express.json());
 app.use(cookieParser());
