@@ -10,7 +10,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 connectDB();
 
-const allowedOrigins = (process.env.NODE_ENV === 'production') ? ['https://mern-auth-indol-beta.vercel.app'] :['http://localhost:5173'] ;
+const allowedOrigins = (process.env.NODE_ENV === 'production') ? ['https://mern-auth-indol-beta.vercel.app'] :['http://localhost:5174'] ;
+
 
 app.use(express.json());
 app.use(cookieParser());
