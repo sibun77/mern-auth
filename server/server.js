@@ -16,8 +16,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 // Allowed frontend URLs
 const allowedOrigin = isProd
-  ? 'https://mern-auth-indol-beta.vercel.app' // your deployed frontend
-  : 'http://localhost:5174';                  // vite dev server
+  ? 'https://mern-auth-indol-beta.vercel.app' 
+  : 'http://localhost:5173';                  
 
 // Middleware
 app.use(express.json());
